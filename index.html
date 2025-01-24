@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prácticas de Geografía</title>
     <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Viga&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Prácticas de Geografía</h1>
+        <button id="btn-alumnos">Alumnos</button>
     </header>
     <nav>
         <ul id="menu">
@@ -27,8 +30,40 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Prácticas de Geografía</p>
+        <p>&copy; 2025 Prácticas de Geografía del Grado en Tecnologías Interactivas</p>
     </footer>
     <script src="js.js"></script>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btnAlumnos = document.getElementById("btn-alumnos");
+
+        // Crear y añadir el modal al DOM
+        const modal = document.createElement("div");
+        modal.classList.add("modal");
+        modal.innerHTML = `
+            <h2>Lista de Alumnos</h2>
+            <p>Manuel Antonio Borregales Perez</p>
+            <p>Alejandro Rosado Jimenez</p>
+            <p>Juan Diaz Gutierrez</p>
+            <button id="close-modal">Cerrar</button>
+        `;
+        document.body.appendChild(modal);
+
+        // Mostrar el modal
+        btnAlumnos.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+
+        // Cerrar el modal
+        modal.addEventListener("click", (e) => {
+            if (e.target.id === "close-modal") {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
 </html>

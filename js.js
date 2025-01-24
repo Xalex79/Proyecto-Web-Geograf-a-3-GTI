@@ -1,6 +1,17 @@
 function mostrarPractica(practica) {
     const contenido = document.getElementById('contenido');
+    const enlaces = document.querySelectorAll('nav ul li a');
 
+    // Elimina la clase "activo" de todos los enlaces
+    enlaces.forEach(enlace => enlace.classList.remove('activo'));
+
+    // Aplica la clase "activo" al enlace que se seleccionó
+    const enlaceActivo = document.querySelector(`nav ul li a[onclick="mostrarPractica('${practica}')"]`);
+    if (enlaceActivo) {
+        enlaceActivo.classList.add('activo');
+    }
+
+    // Muestra el contenido correspondiente a la práctica seleccionada
     switch (practica) {
         case 'P1':
             contenido.innerHTML = '<img src="Practicas/P1/pract%201%20geografia.png" alt="Práctica 1">';
