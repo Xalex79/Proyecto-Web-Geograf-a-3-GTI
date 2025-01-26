@@ -24,8 +24,8 @@ function mostrarPractica(practica) {
             contenido.innerHTML = '<iframe src="Practicas/P4/ZONAS_VALIDAS.html" width="100%" height="500px"></iframe>';
             break;
         case 'P7':
-            contenido.innerHTML = '<img src="Practicas/P7/tabla_resultados.jpg" alt="Tabla de Resultados">' +
-                                  '<iframe src="Practicas/P7/mapa_raster.html" width="100%" height="500px"></iframe>';
+            contenido.innerHTML = '<img src="Practicas/P7/Rendimientos.jpg" alt="Tabla de Resultados">' +
+                                  '<iframe src="Practicas/P7/Waypoints.html" width="100%" height="500px"></iframe>';
             break;
         case 'P8':
             contenido.innerHTML = '<iframe src="Practicas/P8/madrid_accidentes.html" width="100%" height="500px"></iframe>' +
